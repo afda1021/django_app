@@ -1,0 +1,10 @@
+{% extends 'reviews/base.html' %}
+
+{% block content %}
+    <h1>削除</h1>
+    <p>{{ review.store_name }}-{{ review.title }} を削除します。よろしいですか。</p>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <button type="submit">削除</button>
+    </form>
+{% endblock %}

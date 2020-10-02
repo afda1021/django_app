@@ -1,0 +1,16 @@
+{% extends 'videos/base.html' %}
+
+{% block content %}
+<div>
+    <h4>車・バイク推定アプリ</h4>
+    <p>画像ファイルを選択して推定ボタンをクリックしてください。</p>
+    <form action="{% url 'videos:predict' %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.image }}
+        <label>
+            推定したいファイルを選択してください。
+        </label>
+        <button type="submit">推定する!</button>
+    </form>
+</div>
+{% endblock %}

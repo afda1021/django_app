@@ -1,0 +1,9 @@
+{% extends 'todo/base.html' %}
+
+{% block title %}トップページ{% endblock %}
+
+{% block content %}
+    <p>内容：{{ todo.name }}、 状態：{{ todo.get_state_display }}</p>
+    <a href="{% url 'todo:todo_update' todo.id %}">編集</a>
+    <a href="{% url 'todo:todo_delete' todo.id %}">削除</a>
+{% endblock %}

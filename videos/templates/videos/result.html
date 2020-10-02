@@ -1,0 +1,7 @@
+{% extends 'videos/base.html' %}
+
+{% block content %}
+    <h4>車・バイク推定結果</h4>
+        <p>{{ photo_name }}</p>
+    <p><a href="{% url 'videos:index' %}">画像選択メニューに戻る</a></p>
+{% endblock %}

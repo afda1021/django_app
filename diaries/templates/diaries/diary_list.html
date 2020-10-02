@@ -1,0 +1,10 @@
+{% extends 'diaries/base.html' %}
+
+{% block title %}トップページ{% endblock %}
+
+{% block content %}
+{% for diary in diary_list %}
+    <p>{{diary.created_at | date:'Y/n/j G:i'}}-{{diary.category}}</p>
+    <p>{{diary.text}}</p>
+{% endfor %}
+{% endblock %}

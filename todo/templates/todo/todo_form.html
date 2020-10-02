@@ -1,0 +1,16 @@
+{% extends 'todo/base.html' %}
+
+{% block title %}追加ページ{% endblock %}
+
+{% block content %}
+    {% if form.instance.id %}
+        <h2>編集</h2>
+    {% else %}
+        <h2>追加フォーム</h2>
+    {% endif %}
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">送信</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'todo/base.html' %}
+
+{% block title %}トップページ{% endblock %}
+
+{% block content %}
+    {% for todo in todo_list %}
+        <p>内容：<a href="{% url 'todo:todo_detail' todo.id %}">{{ todo.name }}</a>、 状態：{{ todo.get_state_display }}</p>
+    {% endfor %}
+    <a href="{% url 'todo:todo_create' %}">追加</a>
+{% endblock %}
