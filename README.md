@@ -1,4 +1,4 @@
-hackathon-chatapp
+django_app
 ====
 
 アプリのソースコード
